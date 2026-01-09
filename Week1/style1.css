@@ -1,0 +1,54 @@
+.main {
+    padding: 20px;
+    background-color: azure;
+}
+.fruits {
+    color: orange;
+    font-weight: bold;
+}
+.Edibles {
+    font-size: 18px;
+    margin: 10px 0;
+    border: 10px solid purple;
+    font-weight: bold;
+    font-size: 24px;
+}
+#vegetable1 {
+    color: green;
+    font-style: italic;
+    text-align: center;
+}
+#vegetable2 {
+    color: darkgreen;
+    text-align: center;
+}
+#vegetable3 {
+    color: blue;
+    text-decoration: underline;
+    text-align: center;
+}
+#vegetable4 {
+    color: red;
+    text-decoration: underline;
+    text-align: center;
+}
+#vegetable5 {
+    color: yellow;
+    text-decoration: underline;
+    text-align: center;
+}
+#vegetable6 {
+    color: brown;
+    text-decoration: underline;
+    text-align: center;
+}
+#vegetable7 {
+    color: black;
+    text-decoration: underline;
+    text-align: center;
+}
+#vegetable8 {
+    color: rgb(100, 0, 90);
+    text-decoration: underline;
+    text-align: center;
+}
