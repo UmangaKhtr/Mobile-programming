@@ -1,9 +1,7 @@
 function checkGeneration() {
-    // Get user input
-    let age = document.getElementById("ageInput").value;
-    let generation;
+    let age = document.getElementById("ageInput").value; //variable
+    let generation; //variable
 
-    // Control statements
     if (age >= 13 && age <= 28) {
         generation = "Gen Z";
     } else if (age >= 29 && age <= 44) {
@@ -18,7 +16,6 @@ function checkGeneration() {
         generation = "Please enter a valid age";
     }
 
-    // Display result
     document.getElementById("result").innerHTML =
         "Your age: " + age + "<br>" +
         "Generation: " + generation;

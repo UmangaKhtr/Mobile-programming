@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    justify-content: center;
+}
+
+/* default: 1 column */
+#container img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+}
+
+/* 2 columns */
+@media screen and (min-width: 480px) {
+    #container img {
+        width: calc(50% - 2px)
+    }
+}
+
+/* 4 columns */
+@media screen and (min-width: 760px) {
+    #container img {
+        width: calc(25% - 2px)
+    }
+}
+</style>
+</head>
+
+<body>
+<p>Media queries example</p>
+
+<div id="container">
+    <img src="https://thumbs.dreamstime.com/b/fruits-10193811.jpg" width="300" height="200">
+    <img src="https://www.shutterstock.com/image-photo/scenic-image-iceland-incredible-nature-600nw-1453557041.jpg" width="300" height="200">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSxtqo6LA0NhwdRX3tNQb8hXF22BpbJcQiMg&s" width="300" height="200">
+    <img src="https://i.pinimg.com/236x/d1/d4/63/d1d46381d3c104837c94190352b4186b.jpg" width="300" height="200">
+    <img src="https://wallartprints-bt.myshopify.com/cdn/shop/files/hummingbird-nature-pictures-98278440.jpg" width="300" height="200">
+    <img src="https://s.abcnews.com/images/International/twip-01-kenyan-woman-gty-jt-170817_3x2_1600.jpg?w=1600" width="300" height="200">
+    <img src="https://static.vecteezy.com/system/resources/thumbnails/045/132/934/small/a-beautiful-picture-of-the-eiffel-tower-in-paris-the-capital-of-france-with-a-wonderful-background-in-wonderful-natural-colors-photo.jpg" width="300" height="200">
+    <img src="https://i.natgeofe.com/n/29712b3c-fce4-4bbc-99fe-de3a01033e38/01_pod-best-animals.jpg" width="300" height="200">
+    <img src="https://cdn.mos.cms.futurecdn.net/gvQ9NhQP8wbbM32jXy4V3j.jpg" width="300" height="200">
+    <img src="https://i.natgeofe.com/n/dccde4e0-bbcd-4ae0-8e31-5d74b71cf8f0/03_nighttime_animals.jpg" width="300" height="200">
+</div>
+
+</body>
+</html>

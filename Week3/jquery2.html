@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<style>
+  .box {
+    height: 110px;
+    width: 110px;
+    position: absolute;
+  }
+  #div1 { background:#ffcc00; top:50px;  left:50px; }
+  #div2 { background:#bf21b7; top:50px;  left:200px; }
+  #div3 { background:#ff0026; top:200px; left:200px; }
+  #div4 { background:#219dbf; top:200px; left:50px; }
+</style>
+
+<script>
+$(document).ready(function(){
+
+  $("button").click(function(){
+
+    $("#div1").animate({ left: '200px' }, "slow")
+              .animate({ top: '200px' }, "slow")
+              .animate({ left: '50px' }, "slow")
+              .animate({ top: '50px' }, "slow");
+
+    $("#div2").animate({ top: '200px' }, "slow")
+              .animate({ left: '50px' }, "slow")
+              .animate({ top: '50px' }, "slow")
+              .animate({ left: '200px' }, "slow");
+
+    $("#div3").animate({ left: '50px' }, "slow")
+              .animate({ top: '50px' }, "slow")
+              .animate({ left: '200px' }, "slow")
+              .animate({ top: '200px' }, "slow");
+
+    $("#div4").animate({ top: '50px' }, "slow")
+              .animate({ left: '200px' }, "slow")
+              .animate({ top: '200px' }, "slow")
+              .animate({ left: '50px' }, "slow");
+
+  });
+
+});
+</script>
+</head>
+
+<body>
+
+<button>Start Animation</button>
+
+<div id="div1" class="box"></div>
+<div id="div2" class="box"></div>
+<div id="div3" class="box"></div>
+<div id="div4" class="box"></div>
+
+</body>
+</html>
