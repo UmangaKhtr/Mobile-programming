@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery Mobile Menu</title>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 10px;
+    background: #f0f0f0;
+}
+
+h2 {
+    text-align: center;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+#menu {
+    background: #00a86b;
+    margin-top: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.menu-item {
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+
+/* Mobile Media Query */
+@media screen and (max-width: 600px) {
+    body {
+        background: #ffffff;
+    }
+    .menu-item {
+        font-size: 16px;
+        padding: 14px;
+    }
+}
+</style>
+
+<script>
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $("#menu").hide();
+    });
+
+    $("#show").click(function(){
+        $("#menu").show();
+    });
+
+    $("#fade").click(function(){
+        $("#menu").fadeToggle();
+    });
+
+    $("#slide").click(function(){
+        $("#menu").slideToggle();
+    });
+
+    $("#animate").click(function(){
+        $("#menu").animate({
+            opacity: "0.5"
+        }).animate({ height: '50px'}, "slow");
+    });
+
+    $("#stop").click(function(){
+        $("#menu").stop();
+    });
+
+    $("#callback").click(function(){
+        $("#menu").hide(1000, function(){
+            alert("Menu is now hidden (Callback executed)");
+        });
+    });
+
+    $("#chain").click(function(){
+        $("#menu")
+            .css("background","#0077cc")
+            .slideUp(800)
+            .slideDown(800);
+    });
+
+});
+</script>
+</head>
+
+<body>
+
+<h2>jQuery Effects</h2>
+
+<button id="hide">jQuery Hide</button>
+<button id="show">jQuery Show</button>
+<button id="fade">jQuery Fade</button>
+<button id="slide">jQuery Slide</button>
+<button id="animate">jQuery Animate</button>
+<button id="stop">jQuery stop()</button>
+<button id="callback">jQuery Callback</button>
+<button id="chain">jQuery Chaining</button>
+
+<div id="menu">
+    <div class="menu-item">🏠 Home</div>
+    <div class="menu-item">📞 Contact</div>
+    <div class="menu-item">✉️ Email</div>
+</div>
+
+</body>
+</html>
